@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block title %} Sign in - {{super()}} {% endblock %}
+
+{% block app_content %}
+<div class="sign_in_block extra-margin">
+
+  <div>
+    <h1>Sign in</h1> <br><br>
+    {{ wtf.quick_form(form)}}
+  </div>
+
+    <div class="dropdown show extra-margin">
+      <a class="b1 dropdown-toggle helpbutton" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Need help?</a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" href="#">Forget your password?</a>
+      <a class="dropdown-item" href="#">Other issue with sign in</a>
+    </div>
+</div>
+
+</div> <!-- end of sign in block-->
+
+<div >
+<h5><span>New to this website?</span></h5>
+<a href="/register" type="submit" class="btn center">Create your account</a>
+</div>
+{% endblock %}
