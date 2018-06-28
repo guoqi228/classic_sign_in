@@ -1,9 +1,10 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired, EqualTo, Email, Length
+from wtforms.fields.html5 import EmailField
 
 class SigninFormEmail(FlaskForm):
-    useremail = StringField('Email (Phone for mobile account)', validators=[DataRequired(), Email()])
+    useremail = EmailField('Email (Phone for mobile account)', validators=[DataRequired(), Email()])
     submit = SubmitField('Continue')
 
 class SigninFormPassword(FlaskForm):

@@ -111,3 +111,18 @@ ul{
   font-style: italic;
   padding-bottom: 15px;
 }
+.message{
+  color: black;
+  text-align: left;
+}
+.welcome{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+.logout{
+   width: 100%;
+   text-align: center;
+   margin: 10px 0 20px;
+}

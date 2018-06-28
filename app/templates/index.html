@@ -1,5 +1,22 @@
 {% extends 'base.html' %}
 
 {% block app_content %}
-    <h1 class="center">Welcome to My Site</h1>
+
+<div class="row">
+
+  <h1 class="center">Welcome to My Site</h1>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+          <p class="welcome"> {{ message }} </p> <br> <br> <br>
+        {% endfor %}
+    {% endif %}
+  {% endwith %}
+  {% if current_user.is_authenticated %}
+      <h6 class="logout"><a href="{{ url_for('logout')}}">Logout</a></h6>
+  {% endif %}
+
+</div>
+
 {% endblock %}
